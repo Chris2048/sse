@@ -19,8 +19,7 @@ class Sse(object):
 
     def set_retry(self, num):
         """
-        Set distinct retry timeout instead the default
-        value.
+        Set distinct retry timeout instead the default value.
         """
         self._retry = num
         self._buffer.append("retry: {0}\n\n".format(self._retry))
@@ -57,7 +56,7 @@ class Sse(object):
 
     def add_message(self, event, text, encoding='utf-8'):
         """
-        Add messaget with eventname to the buffer.
+        Add message with eventname to the buffer.
 
         :param str event: event name
         :param str/list text: event content. Must be a str or list of str
